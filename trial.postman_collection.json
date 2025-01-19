@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "8c227280-74dd-4d58-9c12-f942135dec0f",
+		"name": "Trial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31510085",
+		"_collection_link": "https://dark-space-831294.postman.co/workspace/My-Workspace~c1856243-1dee-4590-88c7-88acd2c83342/collection/31510085-8c227280-74dd-4d58-9c12-f942135dec0f?action=share&source=collection_link&creator=31510085"
+	},
+	"item": [
+		{
+			"name": "trials/get-trial-by-user-id/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/trials/get-trial-by-user-id/user123",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"trials",
+						"get-trial-by-user-id",
+						"user123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trials/create-or-update-by-user-id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": \"user1234\",\r\n  \"images\": 5,\r\n  \"texts\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/trials/create-or-update-by-user-id",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"trials",
+						"create-or-update-by-user-id"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base-url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
