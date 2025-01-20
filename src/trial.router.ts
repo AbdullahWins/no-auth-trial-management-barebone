@@ -8,6 +8,10 @@ import {
 
 const trial_router: Router = Router();
 
+//hardcoded trial data
+const image = 5;
+const text = 10;
+
 // Get Trial by User ID
 trial_router.get(
   "/get-trial-by-user-id/:id",
@@ -18,7 +22,8 @@ trial_router.get(
       if (trial) {
         res.status(200).json(trial);
       } else {
-        res.status(404).json({ message: "Trial not found" });
+        //if trial does not exist, send back hardcoded trial data
+        res.status(200).json({ user_id, image, text });
       }
     } catch (error) {
       res.status(500).json({ message: "Error fetching trial.", error });
